@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "simplefunctions"
+name = "simplefunctions-ai"
 version = "0.1.0"
 description = "Calibrated world model for AI agents. Real-time probabilities from 9,706 prediction markets."
 readme = "README.md"
