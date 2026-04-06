@@ -4,41 +4,32 @@ build-backend = "hatchling.build"
 
 [project]
 name = "simplefunctions-ai"
-version = "0.1.0"
-description = "Calibrated world model for AI agents. Real-time probabilities from 9,706 prediction markets."
+version = "0.2.0"
+description = "Calibrated world model for AI agents. Real-time probabilities from 30,000+ prediction markets."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
-authors = [
-    { name = "SimpleFunctions", email = "hello@simplefunctions.dev" },
-]
-keywords = [
-    "prediction-markets", "world-model", "ai-agents", "real-time-data",
-    "kalshi", "polymarket", "langchain", "openai", "anthropic", "mcp",
-    "agent-context", "world-state", "probabilities", "geopolitics",
-]
+authors = [{ name = "SimpleFunctions", email = "hello@simplefunctions.dev" }]
+keywords = ["prediction-markets","world-model","ai-agents","real-time-data","kalshi","polymarket","langchain","openai","anthropic","mcp","agent-context","world-state"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = [
-    "requests>=2.28.0",
-]
+dependencies = ["requests>=2.28.0"]
+
+[project.scripts]
+sf-world = "simplefunctions.cli:cmd_world"
+sf-index = "simplefunctions.cli:cmd_index"
+sf-edges = "simplefunctions.cli:cmd_edges"
+sf-market = "simplefunctions.cli:cmd_market"
+sf-delta = "simplefunctions.cli:cmd_delta"
 
 [project.urls]
 Homepage = "https://simplefunctions.dev"
-Documentation = "https://simplefunctions.dev/docs/guide"
 Repository = "https://github.com/spfunctions/simplefunctions-python"
-"World State API" = "https://simplefunctions.dev/api/agent/world"
-"MCP Server" = "https://simplefunctions.dev/api/mcp/mcp"
 
 [tool.hatch.build.targets.wheel]
 packages = ["simplefunctions"]
