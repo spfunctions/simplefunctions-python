@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "simplefunctions-ai"
-version = "0.2.0"
-description = "Calibrated world model for AI agents. Real-time probabilities from 30,000+ prediction markets."
+version = "0.2.1"
+description = "Preview Python client for the SimpleFunctions HTTP/Data API."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
@@ -29,7 +29,10 @@ sf-delta = "simplefunctions.cli:cmd_delta"
 
 [project.urls]
 Homepage = "https://simplefunctions.dev"
+Documentation = "https://docs.simplefunctions.dev/api-reference/overview"
 Repository = "https://github.com/spfunctions/simplefunctions-python"
+"World State API" = "https://simplefunctions.dev/api/agent/world"
+"MCP adapter" = "https://simplefunctions.dev/api/mcp/mcp"
 
 [tool.hatch.build.targets.wheel]
 packages = ["simplefunctions"]

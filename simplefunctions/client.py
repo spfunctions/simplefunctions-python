@@ -2,6 +2,7 @@ import requests
 
 DEFAULT_BASE = "https://simplefunctions.dev"
 DEFAULT_TIMEOUT = 15
+USER_AGENT = "simplefunctions-python/0.2.1"
 
 class PredictionMarketClient:
     def __init__(self, api_key=None, base_url=None, timeout=None):
@@ -10,7 +11,7 @@ class PredictionMarketClient:
         self.timeout = timeout or DEFAULT_TIMEOUT
 
     def _get(self, path, params=None):
-        headers = {}
+        headers = {"User-Agent": USER_AGENT}
         if self.api_key:
             headers["Authorization"] = f"Bearer {self.api_key}"
         url = f"{self.base}{path}"
